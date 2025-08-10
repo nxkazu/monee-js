@@ -28,7 +28,8 @@ const payment = await monee.order_create(
 );
 
 // 3. Проверка статуса
-const status = await monee.order_info(payment.data.order_uuid);```
+const status = await monee.order_info(payment.data.order_uuid);
+```
 Полная документация
 ```bash
 order_create(amount, comment, expire, [options])```
