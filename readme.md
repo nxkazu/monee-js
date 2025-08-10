@@ -8,8 +8,9 @@
 npm install monee-api
 # или
 yarn add monee-api
+```
 Быстрый старт
-javascript
+```javascript
 const Monee = require('monee-api');
 
 // 1. Инициализация
@@ -27,14 +28,15 @@ const payment = await monee.order_create(
 );
 
 // 3. Проверка статуса
-const status = await monee.order_info(payment.data.order_uuid);
+const status = await monee.order_info(payment.data.order_uuid);```
 Полная документация
-order_create(amount, comment, expire, [options])
+```bash
+order_create(amount, comment, expire, [options])```
 Создает новый платеж.
 
 Параметры:
 
-amount - сумма платежа (число)
+```amount - сумма платежа (число)
 
 comment - описание платежа (строка)
 
@@ -48,30 +50,8 @@ hook_url - URL для webhook-уведомлений
 
 method - метод оплаты
 
-custom_fields - дополнительные поля
+custom_fields - дополнительные поля```
 
 Возвращает:
 
-Объект с данными платежа или строку с ошибкой
-
-order_info(order_id)
-Проверяет статус платежа.
-
-Параметры:
-
-order_id - идентификатор платежа
-
-Возвращает:
-
-Объект с информацией о платеже или строку с ошибкой
-
-Обработка ошибок
-Все методы возвращают Promise. Для обработки ошибок используйте try/catch:
-
-javascript
-try {
-  const result = await monee.order_create(...);
-  console.log(result);
-} catch (error) {
-  console.error('Ошибка:', error);
-}
+```bash Объект с данными платежа или строку с ошибкой```
