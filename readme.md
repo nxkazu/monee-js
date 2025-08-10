@@ -22,8 +22,11 @@ const payment = await monee.order_create(
   'Оплата заказа #42', // Комментарий
   60, // Время жизни платежа в минутах
   {
-    success_url: 'https://вашсайт.ru/success', // URL для редиректа
-    hook_url: 'https://вашсайт.ru/hook' // URL для уведомлений
+    success_url: 'https://SITE.ru/success', // URL для редиректа
+    hook_url: 'https://SITE.ru/hook', // URL для уведомлений
+    method: 'card', // Метод оплаты, взятый из библиотеки docs.monee.pro
+    subtract: 1, // С кого списывать комиссию: 1 - с клиента, 0 - с магазина
+    custom_fields: "nickname" // Особое поле, по которому будет платеж связан с заказчиком
   }
 );
 
