@@ -1,6 +1,6 @@
 {
   "name": "monee-api",
-  "version": "1.0.0",
+  "version": "1.0.0-update",
   "description": "Node.js library for Monee payment API",
   "main": "index.js",
   "keywords": [
