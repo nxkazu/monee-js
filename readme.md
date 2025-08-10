@@ -37,7 +37,7 @@ order_create(amount, comment, expire, [options])```
 
 Параметры:
 
-```amount - сумма платежа (число)
+```text amount - сумма платежа (число)
 
 comment - описание платежа (строка)
 
@@ -51,7 +51,8 @@ hook_url - URL для webhook-уведомлений
 
 method - метод оплаты
 
-custom_fields - дополнительные поля```
+custom_fields - дополнительные поля 
+```
 
 Возвращает:
 
