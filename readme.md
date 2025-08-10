@@ -30,30 +30,3 @@ const payment = await monee.order_create(
 // 3. Проверка статуса
 const status = await monee.order_info(payment.data.order_uuid);
 ```
-Полная документация
-```bash
-order_create(amount, comment, expire, [options])```
-Создает новый платеж.
-
-Параметры:
-
-```text amount - сумма платежа (число)
-
-comment - описание платежа (строка)
-
-expire - время жизни в минутах (число)
-
-options - дополнительные параметры (объект):
-
-success_url - URL для редиректа после оплаты
-
-hook_url - URL для webhook-уведомлений
-
-method - метод оплаты
-
-custom_fields - дополнительные поля 
-```
-
-Возвращает:
-
-```bash Объект с данными платежа или строку с ошибкой```
